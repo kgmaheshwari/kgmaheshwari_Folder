@@ -1,0 +1,40 @@
+﻿---------------- START OF EXECUTION ----------------
+10/03/2019 17:54:05 BOT Execution started
+10/03/2019 17:54:06 BOT started reading work order report spreadsheet
+10/03/2019 17:54:06 BOT completed reading work order report spreadsheet
+10/03/2019 17:54:07 BOT started reading work order with purchase orders spreadsheet
+10/03/2019 17:54:07 BOT completed reading work order with purchase orders spreadsheet
+10/03/2019 17:54:07 BOT started joining spreadsheet datatables
+10/03/2019 17:54:07 BOT completed joining spreadsheet datatables
+10/03/2019 17:54:07 BOT started filtering unwanted rows & columns
+10/03/2019 17:54:07 BOT completed filtering unwanted rows & columns
+10/03/2019 17:54:07 BOT started writing filtered data to result file
+10/03/2019 17:54:09 BOT completed writing filtered data to result file
+10/03/2019 17:54:09 BOT started Login into Oracle Cloud
+10/03/2019 17:54:32 BOT completed Login into Oracle Cloud
+10/03/2019 17:54:32 BOT started posting reservations into Oracle Cloud
+10/03/2019 17:56:46 BOT completed posting reservations into Oracle Cloud
+10/03/2019 17:56:46 BOT started logout from Oracle Cloud
+10/03/2019 17:57:37 BOT encountered error while logging out from Oracle Cloud
+---------------- END OF EXECUTION ----------------
+
+---------------- START OF EXECUTION ----------------
+10/03/2019 18:18:55 BOT Execution started
+10/03/2019 18:18:57 BOT started reading work order report spreadsheet
+10/03/2019 18:18:57 BOT completed reading work order report spreadsheet
+10/03/2019 18:18:57 BOT started reading work order with purchase orders spreadsheet
+10/03/2019 18:18:57 BOT completed reading work order with purchase orders spreadsheet
+10/03/2019 18:18:58 BOT started joining spreadsheet datatables
+10/03/2019 18:18:58 BOT completed joining spreadsheet datatables
+10/03/2019 18:18:58 BOT started filtering unwanted rows & columns
+10/03/2019 18:18:58 BOT completed filtering unwanted rows & columns
+10/03/2019 18:18:58 BOT started writing filtered data to result file
+10/03/2019 18:18:59 BOT completed writing filtered data to result file
+10/03/2019 18:18:59 BOT started Login into Oracle Cloud
+10/03/2019 18:19:26 BOT completed Login into Oracle Cloud
+10/03/2019 18:19:26 BOT started posting reservations into Oracle Cloud
+10/03/2019 18:21:40 BOT completed posting reservations into Oracle Cloud
+10/03/2019 18:21:40 BOT started logout from Oracle Cloud
+10/03/2019 18:22:04 BOT completed logout from Oracle Cloud
+10/03/2019 18:22:04 BOT Execution completed
+---------------- END OF EXECUTION ----------------
