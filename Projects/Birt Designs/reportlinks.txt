@@ -1,0 +1,11 @@
+
+http://localhost:8080/birt/frameset?__report=Monthly_report.rptdesign
+http://localhost:8080/birt/frameset?__report=Dashboard_report.rptdesign
+
+
+jdbc:sqlserver://Karunkumar;databaseName=test
+
+
+
+
+
