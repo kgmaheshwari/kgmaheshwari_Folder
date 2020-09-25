@@ -1,0 +1,34 @@
+{
+  "name": "Bot2",
+  "description": "Bot2",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[18.3.6864.20561]",
+    "UiPath.Excel.Activities": "[2.4.6863.30657]",
+    "UiPath.Mail.Activities": "[1.2.6863.29868]",
+    "Microsoft.Activities": "[1.0.1]",
+    "Microsoft.Activities.Extensions": "[2.0.6.9]",
+    "BalaReva.DataTable.Activities": "[1.1.0]",
+    "UiPath.Database.Activities": "[1.2.6863.32528]",
+    "UiPath.UIAutomation.Activities": "[18.3.6877.28298]"
+  },
+  "schemaVersion": "3.2",
+  "studioVersion": "18.3.1.0",
+  "projectVersion": "1.0.6927.36126",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ]
+  },
+  "projectType": "Workflow",
+  "libraryOptions": {
+    "includeOriginalXaml": false,
+    "privateWorkflows": []
+  },
+  "arguments": {
+    "input": [],
+    "output": []
+  }
+}
