@@ -1,0 +1,132 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Open_Application" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="InputPath" Type="InArgument(ui:GenericValue)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>376.8,792</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.POP3.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Orchestrator.Client</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="336.8,712" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'CDViewer.exe R05-VBApp'" sap:VirtualizedContainerService.HintSize="314.4,107.2" sap2010:WorkflowViewState.IdRef="ClickImage_30" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='cdviewer.exe' ctrlname='MainWindow' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'CDViewer.exe R05-VBApp'" sap:VirtualizedContainerService.HintSize="314.4,107.2" sap2010:WorkflowViewState.IdRef="ClickImage_35" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAbCAYAAADGfCe4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKbSURBVFhH7ZTfS5NRHIeDLqwNuusqgm6ioiKiDNRYlPmDFRlqas1RM7Uhim5pjtQSxcyNnE4NSm3anL+qaTgic+qcP7ahUln/z9OZuRAS3teLgbzs4rk4n3O+57zPeTnffb9/hFA6cUmlEJdUCnFJpRCXVAqSkkH/NGO9PTgF77YYGRtiPhxi4/vONXsNSUmXo50z+xM4pFKhUqtRqw9yOvkKDZ8CBNeC/NqhZq8hLdk/RkqikQ6Xi97P44y6W+h4bCDtbAWv5+ZY2qFmryEt6fSg0Txl1D/PFzFeXh3GZa0h+bCeVzM+AosDOB12ml8MEBDzG5G6aNZo56vXjrnSTpulEFNxOtrMdLKyc6h3zjCz9P95sWD3koF++loqOHGyDOvsLAGfjaYqEwX3bUyL+Z+RumiWZ2LUVY7mVCr5+dkUG3U8yNOiyzjPxaJu3kz6WN86J5ZIS/a5STqn47ndzkvRdLpstdRXPSL5YTtdSwssSUm+N6I5ehzdk24Gv4k5/wj+zkKOJVXSLC5wedtZsWJXjUetOkDCkRSS9NbNvxphVUrSbUJz2UR7VCjoYVFkV7dnMUZ24+kcGsIzWEvlbR05qRaFSYoPib7J2fAUnu5nNN7Vc+NOE+MB/19JQykF2vp/kivOcoyFOq7JkVz5gPdtG5ViP7fYLxRZIzeTya4k58V4TbypT1YzuSkZFJXX0eN0YKuuoCzjFiXmCswCS9lNMrX5pMuRXOjD1SDeeLRbR9bIzWQiKTnx0UuxaDJToslEO+G6z81kcy7XNblUO9wMu9rpMWu5lHhhkyyDnnsldVhqWpmabKXY0MqA2CccqQ97CYmsNJotjzLhaMSQZsEpLnIlskZuJhNJSSUQl1QKcUmlEJdUBiH+APHTxdXBPzB1AAAAAElFTkSuQmCC" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='cdviewer.exe' ctrlname='MainWindow' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314.4,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="del" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'WindowsForms10.Window.8...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="314.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_11" SendWindowMessages="False" SimulateType="False" Text="[&quot;[k(tab)]&quot; + InputPath +&quot;[k(enter)]&quot;]">
+      <ui:TypeInto.Target>
+        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1366bd38f3558d7351e4857653ec7bcf" Selector="&lt;wnd app='cdviewer.exe' ctrlname='MainWindow' /&gt;&lt;wnd ctrlname='displayPanel' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="67, 532, 156, 28" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+  </Sequence>
+</Activity>
