@@ -1,0 +1,365 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
+ xmlns:si="clr-namespace:System.IO;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Database</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="Main" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="reqNo" />
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="connectionObj" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="config" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;Settings&quot;,&quot;Constants&quot;}]" Name="configSheets" />
+      <Variable x:TypeArguments="sd:DataTable" Name="modifiedMHFileDT" />
+      <Variable x:TypeArguments="x:String" Name="exceptionMsg" />
+      <Variable x:TypeArguments="x:String" Name="InputFolder_Path" />
+    </Flowchart.Variables>
+    <Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_37">
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Input folder path" DisplayName="Get Asset" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">[InputFolder_Path]</OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+          <While sap2010:WorkflowViewState.IdRef="While_1">
+            <While.Variables>
+              <Variable x:TypeArguments="ui:GenericValue" Name="item" />
+            </While.Variables>
+            <While.Condition>[Directory.GetFiles(InputFolder_Path).Length &lt;&gt; 0]</While.Condition>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Read Orchestrator Assets" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_78" UnSafe="False" WorkflowFileName="Orchestrator_Assets.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</OutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <Assign sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[item]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="ui:GenericValue">[Directory.GetFiles(config("Input folder path").ToString)(0)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:DatabaseConnect DatabaseConnection="[connectionObj]" DisplayName="Connect" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="[&quot;Data Source=&quot;+config(&quot;Data source&quot;)+&quot;;Initial Catalog=&quot;+config(&quot;DB name&quot;)+&quot;;Integrated Security=True&quot;]" />
+              <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="TextId" />
+                  <Variable x:TypeArguments="ui:GenericValue" Name="tID" />
+                  <Variable x:TypeArguments="ui:GenericValue" Name="fullPath" />
+                  <Variable x:TypeArguments="sd:DataTable" Name="csvDT" />
+                  <Variable x:TypeArguments="x:String" Name="CsvOptDt" />
+                  <Variable x:TypeArguments="si:FileInfo" Name="fi" />
+                  <Variable x:TypeArguments="ui:GenericValue" Name="FileClientName" />
+                  <Variable x:TypeArguments="ui:GenericValue" Name="FileName" />
+                </Sequence.Variables>
+                <Assign sap2010:WorkflowViewState.IdRef="Assign_10">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[FileName]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="ui:GenericValue">[Path.GetFileName(item)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign sap2010:WorkflowViewState.IdRef="Assign_11">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="si:FileInfo">[fi]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="si:FileInfo">[new fileinfo(item)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign sap2010:WorkflowViewState.IdRef="Assign_12">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[FileClientName]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="ui:GenericValue">[fi.Name.Split({" "c,"."c})(0)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Get Set Request Number" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="GetSetRequestNumber.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <OutArgument x:TypeArguments="x:Int32" x:Key="reqNo">[reqNo]</OutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Insert Request Into Process Master" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_57" UnSafe="False" WorkflowFileName="InsertRequestIntoProcessMaster.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connectionObj">[connectionObj]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="reqNo">[reqNo]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Write Log" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_58" UnSafe="False" WorkflowFileName="WriteLog.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connectionObj">[connectionObj]</InArgument>
+                    <InArgument x:TypeArguments="s:Object[]" x:Key="dataArray">[{reqNo,1,"Process started"}]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="reqNo">[reqNo]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Read Config File" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_59" UnSafe="False" WorkflowFileName="ReadConfigFile.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="s:String[]" x:Key="configSheets">[configSheets]</InArgument>
+                    <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="config">[config]</InOutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="FileName">[FileName]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Write Log" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_80" UnSafe="False" WorkflowFileName="WriteLog.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connectionObj">[connectionObj]</InArgument>
+                    <InArgument x:TypeArguments="s:Object[]" x:Key="dataArray">[{reqNo,2,"Config file read Successfully"}]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="reqNo">[reqNo]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Generate MH Sheet" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_61" UnSafe="False" WorkflowFileName="GenerateOuputfileMHSheet.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Generate XTEND Sheet" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_62" UnSafe="False" WorkflowFileName="GenerateSheet2ForOutputFile.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Generate MH Summary Sheet" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_63" UnSafe="False" WorkflowFileName="GenerateSummary.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="cntCol">[config("CNT_COLM")]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="grpCol">[config("GRP_COL")]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="agrCol">[config("AGR_COL")]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SheetName">[config("MH file sheet name")]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="FilePath">[config("Output file path")]</InArgument>
+                    <OutArgument x:TypeArguments="sd:DataTable" x:Key="MHSheetDT">[modifiedMHFileDT]</OutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SummarySheet">[config("Client summary sheet name")]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Generate Xtend Summary Sheet" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_64" UnSafe="False" WorkflowFileName="GenerateSummary.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="cntCol">[config("CLI_CNT_COLM")]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="grpCol">[config("CLI_GRP_COL")]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="agrCol">[config("CLI_AGR_COL")]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SheetName">[config("Client file sheet name")]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="FilePath">[config("Output file path")]</InArgument>
+                    <OutArgument x:TypeArguments="sd:DataTable" x:Key="MHSheetDT" />
+                    <InArgument x:TypeArguments="x:String" x:Key="SummarySheet">[config("Client summary sheet name")]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Generate MH Not Xtend Sheet" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_68" UnSafe="False" WorkflowFileName="GenerateMHNotExtendSheet.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Generate Xtend Not MH Sheet" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_69" UnSafe="False" WorkflowFileName="GenerateXtendNotMHSheet.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Write Log" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_82" UnSafe="False" WorkflowFileName="WriteLog.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connectionObj">[connectionObj]</InArgument>
+                    <InArgument x:TypeArguments="s:Object[]" x:Key="dataArray">[{reqNo,3,"Output file generated Successfully"}]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="reqNo">[reqNo]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Send Email" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_71" UnSafe="False" WorkflowFileName="SendEmail.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Write Log" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_83" UnSafe="False" WorkflowFileName="WriteLog.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connectionObj">[connectionObj]</InArgument>
+                    <InArgument x:TypeArguments="s:Object[]" x:Key="dataArray">[{reqNo,4,"Notification mail sent successfully"}]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="reqNo">[reqNo]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Move to Processed Folder" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_73" UnSafe="False" WorkflowFileName="MovetoProcessedFolder.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[Config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Write Log" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_84" UnSafe="False" WorkflowFileName="WriteLog.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connectionObj">[connectionObj]</InArgument>
+                    <InArgument x:TypeArguments="s:Object[]" x:Key="dataArray">[{reqNo,5,"Files moved Succesfully"}]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="reqNo">[reqNo]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Write Log" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_88" UnSafe="False" WorkflowFileName="WriteLog.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connectionObj">[connectionObj]</InArgument>
+                    <InArgument x:TypeArguments="s:Object[]" x:Key="dataArray">[{reqNo,6,"Process completed Successfully"}]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="reqNo">[reqNo]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="Config">[config]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+            </Sequence>
+          </While>
+        </Sequence>
+      </FlowStep>
+    </Flowchart.StartNode>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <sads:DebugSymbol.Symbol>d6UBQzpcVXNlcnNcS1JJU0hBTiBHT1BBTFxEZXNrdG9wXFJQQVxSUEFfV29ya3NwYWNlXE1IUlBBXEJPVCAxIChEYWlseSBwbGFjZW1lbnQg4oCTIGlucHV0IGZpbGUgY3N2IGFuZCBnZW5lcmF0ZSBleGNlbCBmaWxlIGFuZCBjb21wYXJlIGRhdGEpXE1IUlBBX0JvdDFcTUhSUEFcTWFpbi54YW1scUoDkgIPAgEBTzZPZgIBAlYJjQIUAgEDVwtbHgMBqQFcC4wCEwIBBFk3WUkDAasBVzxXTwMBqgFhDYsCGAIBBmAeYFYCAQViD2YnAwGlAWcPbhgDAaEBbw9v5wIDAZoBcA+KAhoCAQdkZGRsAwGnAWLAAWLaAQMBpgFsQWx+AwGkAWlCaUgDAaIBb58Bb7YBAwGgAW/IAW/kAgMBnQFvNm9HAwGbAXsRggEaAwGWAYMBEYoBGgMBkgGLARGSARoDAY0BkwERlwEpAwGJAZgBEZ4BKQMBgQGfARGmASkCAXenARGtASkCAXCuARG1ASkCAWa2ARG6ASkCAWK7ARG/ASkCAV7AARHKASkCAU7LARHVASkCAUDWARHaASkCATzbARHfASkCATjgARHnASkCAS7oARHsASkCASrtARH0ASkCASD1ARH5ASkCARz6ARGBAikCARKCAhGJAikCAQiAAUOAAVsDAZkBfUR9TgMBlwGIAT+IAVMDAZUBhQFAhQFEAwGTAZABQ5ABYgMBkAGNAUSNAVQDAY4BkwHAAZMB2gEDAYwBlQFKlQFRAwGKAZwBZZwBbQMBhwGaAV+aAW4DAYUBmAHMAZgB8QEDAYQBmwFJmwFQAwGCAaIBUKIBbQIBf6QBZaQBbQIBfaEBX6EBbgIBe58BswGfAcIBAgF6owFJowFQAgF4qQFTqQFhAgF1qwFNqwFXAgF0qgFoqgFwAgFypwG6AacBzwECAXGxAVCxAXsCAW6zAWWzAW0CAWywAV+wAW4CAWquAbMBrgHCAQIBabIBSbIBUAIBZ7gBZbgBbQIBZLYBuwG2AdoBAgFjvQFlvQFtAgFguwG+AbsB4AECAV/HAVPHAWUCAVzCAUvCAV8CAVrFAU7FAWwCAVjDAUvDAV4CAVbIAVHIAXYCAVTAAcMBwAHZAQIBU8QBS8QBXgIBUcYBTcYBaQIBT80BS80BYwIBTNABTtABcAIBSs4BS84BYgIBSNMBUdMBdgIBRssBxgHLAdwBAgFFzwFLzwFiAgFD0QFN0QFpAgFB2AFl2AFtAgE+1gHFAdYB5AECAT3dAWXdAW0CATrbAcUB2wHjAQIBOeMBUOMBgAECATblAWXlAW0CATTiAV/iAW4CATLgAbMB4AHCAQIBMeQBSeQBUAIBL+oBZeoBbQIBLOgBtAHoAcQBAgEr8AFQ8AGBAQIBKPIBZfIBbQIBJu8BX+8BbgIBJO0BswHtAcIBAgEj8QFJ8QFQAgEh9wFl9wFtAgEe9QHCAfUB3gECAR39AVD9AXUCARr/AWX/AW0CARj8AV/8AW4CARb6AbMB+gHCAQIBFf4BSf4BUAIBE4UCUIUCfAIBEIcCZYcCbQIBDoQCX4QCbgIBDIICswGCAsIBAgELhgJJhgJQAgEJ</sads:DebugSymbol.Symbol>
+  </Flowchart>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="GetRobotAsset_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_78" sap:VirtualizedContainerService.HintSize="336,87" />
+      <sap2010:ViewStateData Id="Assign_9" sap:VirtualizedContainerService.HintSize="336,60" />
+      <sap2010:ViewStateData Id="DatabaseConnect_1" sap:VirtualizedContainerService.HintSize="336,59" />
+      <sap2010:ViewStateData Id="Assign_10" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Assign_11" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Assign_12" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_56" sap:VirtualizedContainerService.HintSize="314,87">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_57" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_58" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_59" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_80" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_61" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_62" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_63" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_64" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_68" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_69" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_82" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_71" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_83" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_73" sap:VirtualizedContainerService.HintSize="314,87">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_84" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_88" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="336,2543">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="358,2993">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="While_1" sap:VirtualizedContainerService.HintSize="464,3151">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="486,3337">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_37">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,134.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="614,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,134.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,716" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
