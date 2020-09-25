@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities>
+  <Entity Name="Variables.atmx">
+    <Properties>
+      <Property Name="LastRunTime">04/23/2019 22:38:31</Property>
+      <Property Name="RunDuration">00:00:16</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+  <Entity Name="Prompt.atmx">
+    <Properties>
+      <Property Name="LastRunTime">04/23/2019 22:39:21</Property>
+      <Property Name="RunDuration">00:00:22</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+</Entities>
