@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------
+10/23/2019 17:32:06
+1. Process Started, File C:\Users\Nalam Karun Kumar\Desktop\NewPark_POC\Input\PO_342_410982_0_US.pdf Opended Successfully
+2. Data Scrapping is completed Successfully
+3. Connected to DB Successfully
+4. Data Validation Done Successfully
+5. Invoice Generated Successfully
+6. Email Notification Sent Successfully
+7. Process Completed Successfully
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+10/23/2019 19:21:47
+1. Process Started, File C:\Users\Nalam Karun Kumar\Desktop\NewPark_POC\Input\PO_342_410982_0_US.pdf Opended Successfully
