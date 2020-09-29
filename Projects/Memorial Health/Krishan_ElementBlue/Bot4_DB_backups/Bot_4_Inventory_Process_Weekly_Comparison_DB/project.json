@@ -1,0 +1,32 @@
+{
+  "name": "Bot_4_Inventory_Process_Weekly_Comparison_DB",
+  "description": "Bot 4 - Inventory Process Weekly Comparison",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.UIAutomation.Activities": "[19.1.0]",
+    "UiPath.System.Activities": "[18.4.2]",
+    "UiPath.Excel.Activities": "[2.5.1]",
+    "UiPath.Mail.Activities": "[1.3.0]",
+    "Microsoft.Activities.Extensions": "[2.0.6.9]",
+    "UiPath.Database.Activities": "[1.2.6863.32528]"
+  },
+  "schemaVersion": "3.2",
+  "studioVersion": "19.1.0.0",
+  "projectVersion": "1.0.7080.12999",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ]
+  },
+  "projectType": "Workflow",
+  "libraryOptions": {
+    "includeOriginalXaml": false,
+    "privateWorkflows": []
+  },
+  "arguments": {
+    "input": [],
+    "output": []
+  }
+}

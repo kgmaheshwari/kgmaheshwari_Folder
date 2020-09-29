@@ -1,0 +1,118 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WriteInputDataIntoDB" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ConnectionObj" Type="InArgument(ui:DatabaseConnection)" />
+    <x:Property Name="TextDT" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="ExcelDT" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="Client" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>376,1834</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Write Input Data Into DB" sap:VirtualizedContainerService.HintSize="336,1754" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:AddDataColumn x:TypeArguments="x:Object" Column="{x:Null}" AllowDBNull="False" AutoIncrement="False" ColumnName="REQ_NO" DataTable="[TextDT]" DefaultValue="[Config(&quot;Inv Weekly Comparison Req No&quot;)]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" MaxLength="100" Unique="False" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" Column="{x:Null}" AllowDBNull="False" AutoIncrement="False" ColumnName="MESSAGE_DATETIME" DataTable="[TextDT]" DefaultValue="[DATETIME.NOW]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" MaxLength="100" Unique="False" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" Column="{x:Null}" AllowDBNull="False" AutoIncrement="False" ColumnName="CLIENT" DataTable="[TextDT]" DefaultValue="[Client.ToUpper]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" MaxLength="100" Unique="False" />
+    <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="314,132" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="SetOrdinal">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="sd:DataColumn">[TextDT.Columns("REQ_NO")]</InArgument>
+      </InvokeMethod.TargetObject>
+      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+    </InvokeMethod>
+    <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="314,132" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="SetOrdinal">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="sd:DataColumn">[TextDT.Columns("MESSAGE_DATETIME")]</InArgument>
+      </InvokeMethod.TargetObject>
+      <InArgument x:TypeArguments="x:Int32">1</InArgument>
+    </InvokeMethod>
+    <ui:InsertDataTable AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" DataTable="[TextDT]" DisplayName="Insert" ExistingDbConnection="[ConnectionObj]" sap:VirtualizedContainerService.HintSize="314,115" sap2010:WorkflowViewState.IdRef="InsertDataTable_3" TableName="[Config(&quot;Inv Weekly Compare Agency Recon File Table&quot;)]" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" Column="{x:Null}" AllowDBNull="False" AutoIncrement="False" ColumnName="REQ_NO" DataTable="[ExcelDT]" DefaultValue="[Config(&quot;Inv Weekly Comparison Req No&quot;)]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" MaxLength="100" Unique="False" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" Column="{x:Null}" AllowDBNull="False" AutoIncrement="False" ColumnName="MESSAGE_DATETIME" DataTable="[ExcelDT]" DefaultValue="[DATETIME.NOW]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" MaxLength="100" Unique="False" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" Column="{x:Null}" AllowDBNull="False" AutoIncrement="False" ColumnName="CLIENT" DataTable="[ExcelDT]" DefaultValue="[Client.ToUpper]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5" MaxLength="100" Unique="False" />
+    <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="314,132" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="SetOrdinal">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="sd:DataColumn">[ExcelDT.Columns("REQ_NO")]</InArgument>
+      </InvokeMethod.TargetObject>
+      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+    </InvokeMethod>
+    <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="314,132" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="SetOrdinal">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="sd:DataColumn">[ExcelDT.Columns("MESSAGE_DATETIME")]</InArgument>
+      </InvokeMethod.TargetObject>
+      <InArgument x:TypeArguments="x:Int32">1</InArgument>
+    </InvokeMethod>
+    <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="314,132" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="SetOrdinal">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="sd:DataColumn">[ExcelDT.Columns("MESSAGE_DATETIME")]</InArgument>
+      </InvokeMethod.TargetObject>
+      <InArgument x:TypeArguments="x:Int32">2</InArgument>
+    </InvokeMethod>
+    <ui:InsertDataTable AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" DataTable="[ExcelDT]" DisplayName="Insert" ExistingDbConnection="[ConnectionObj]" sap:VirtualizedContainerService.HintSize="314,115" sap2010:WorkflowViewState.IdRef="InsertDataTable_2" TableName="[Config(&quot;Inv Weekly Compare Client File Table&quot;)]" />
+    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[ConnectionObj]" sap:VirtualizedContainerService.HintSize="314,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="[&quot;exec [Inv_Weekly_Compare_Proc] @reqNo = &quot;+ Config(&quot;Inv Weekly Comparison Req No&quot;)+&quot;, @clientName = &quot;+Client]">
+      <ui:ExecuteNonQuery.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:ExecuteNonQuery.Parameters>
+    </ui:ExecuteNonQuery>
+  </Sequence>
+</Activity>
