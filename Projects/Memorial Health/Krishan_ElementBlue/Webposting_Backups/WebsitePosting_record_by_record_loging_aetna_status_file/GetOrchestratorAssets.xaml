@@ -1,0 +1,244 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Orchestrator_Assets"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:maes="clr-namespace:Microsoft.Activities.Extensions.Statements;assembly=Microsoft.Activities.Extensions"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ss="clr-namespace:System.Security;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Config" Type="OutArgument(scg:Dictionary(x:String, x:String))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Orchestrator_Assets_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Security</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Orchestrator_Assets" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;Data Source Name&quot;,&quot;Database Name&quot;,&quot;Wp req no&quot;,&quot;Wp process detail&quot;,&quot;Wp process master&quot;,&quot;Wp process output&quot;,&quot;Email Mail Body&quot;,&quot;Email Port No&quot;,&quot;Email Server&quot;,&quot;Email Subject&quot;,&quot;Email Receiver Id&quot;,&quot;Email Display Name&quot;,&quot;Wp config file path&quot;}]" Name="orchestratorAssets" />
+      <Variable x:TypeArguments="ss:SecureString" Name="fromMailIdPWD" />
+      <Variable x:TypeArguments="x:String" Name="fromMailIdUser" />
+      <Variable x:TypeArguments="x:String" Name="pwd" />
+      <Variable x:TypeArguments="ss:SecureString" Name="aetnaSitePassword" />
+      <Variable x:TypeArguments="x:String" Name="aetnaSiteUsername" />
+      <Variable x:TypeArguments="x:String" Name="aetnaPassword" />
+      <Variable x:TypeArguments="ss:SecureString" Name="HQPassword" />
+      <Variable x:TypeArguments="x:String" Name="HQUsername" />
+      <Variable x:TypeArguments="x:String" Name="HQPasswordStr" />
+    </Sequence.Variables>
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[config]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[new Dictionary(of string,string)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[orchestratorAssets]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:GenericValue" Name="assetValue" />
+            </Sequence.Variables>
+            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="[item]" DisplayName="Get Asset" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+              <ui:GetRobotAsset.Value>
+                <OutArgument x:TypeArguments="ui:GenericValue">[assetValue]</OutArgument>
+              </ui:GetRobotAsset.Value>
+            </ui:GetRobotAsset>
+            <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[config]" DisplayName="Add to dictionary" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_1" Key="[item.ToString]" Value="[assetValue.ToString]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Email Sender Id" DisplayName="Get Credential" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[fromMailIdPWD]" Username="[fromMailIdUser]" />
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[pwd]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[new System.Net.NetworkCredential(string.Empty, fromMailIdPWD).Password]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[config]" DisplayName="Add to dictionary" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_2" Key="From mail id" Value="[fromMailIdUser]" />
+    <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[config]" DisplayName="Add to dictionary" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_3" Key="From mail id password" Value="[pwd]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Wp Aetna Credentials" DisplayName="Get Credential" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[aetnaSitePassword]" Username="[aetnaSiteUsername]" />
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[aetnaPassword]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[new System.Net.NetworkCredential(string.Empty, aetnaSitePassword).Password]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[config]" DisplayName="Add to dictionary" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_4" Key="Aetna user name" Value="[aetnaSiteUsername]" />
+    <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[config]" DisplayName="Add to dictionary" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_5" Key="Aetna password" Value="[aetnaPassword]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Wp Health Quest Credentials " DisplayName="Get Credential" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[HQPassword]" Username="[HQUsername]" />
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[HQPasswordStr]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[new System.Net.NetworkCredential(string.Empty, HQPassword).Password]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[config]" DisplayName="Add to dictionary" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_6" Key="HQ Username" Value="[HQUsername]" />
+    <maes:AddToDictionary x:TypeArguments="x:String, x:String" Dictionary="[config]" DisplayName="Add to dictionary" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_7" Key="HQ Password" Value="[HQPasswordStr]" />
+    <sads:DebugSymbol.Symbol>d1lDOlxSUEFcUmVsZWFzZXNcUHJlQWRtaXNzaW9uc1xBcHJfMjRfUHJvZF9SZWFkeVxXZWJzaXRlUG9zdGluZ1xHZXRPcmNoZXN0cmF0b3JBc3NldHMueGFtbDxNA5gBDgIBAU82T6gDAgECWgVhDgIBV2IFdRICAUh2BXbaAQIBQncFfg4CAT1/BX/aAQIBN4ABBYAB2AECATGBAQWBAeYBAgErggEFiQEOAgEmigEFigHgAQIBIIsBBYsB2wECARqMAQWMAeABAgEUjQEFlAEOAgEPlQEFlQHVAQIBCZYBBZYB2AECAQNfSl9sAgFaXEtcUwIBWGKQAWKmAQIBVWgLchYCAUl2O3ZMAgFHdsUBdtcBAgFFdqoBdrsBAgFDfDB8eAIBQHkxeTYCAT5/xQF/1wECATt/S39VAgE5f7ABf74BAgE4gAHOAYAB1QECATWAAUuAAVUCATOAAbABgAHHAQIBMoEBO4EBUQIBMIEBzgGBAeMBAgEugQGvAYEBxAECASyHATCHAXwCASmEATGEAUACASeKAcgBigHdAQIBJIoBS4oBVQIBIooBsAGKAcEBAgEhiwHHAYsB2AECAR6LAUuLAVUCARyLAbABiwHAAQIBG4wBO4wBWQIBGYwBzwGMAd0BAgEXjAG3AYwBxQECARWSATCSAXUCARKPATGPAUACARCVAcQBlQHSAQIBDZUBS5UBVQIBC5UBsAGVAb0BAgEKlgHEAZYB1QECAQeWAUuWAVUCAQWWAbABlgG9AQIBBGwNcCACAVBxDXHqAQIBSm5AbkwCAVNsPmxGAgFRcdABcecBAgFPcVNxXQIBTXG4AXHJAQIBSw==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="378,60" />
+      <sap2010:ViewStateData Id="GetRobotAsset_1" sap:VirtualizedContainerService.HintSize="378,22" />
+      <sap2010:ViewStateData Id="AddToDictionary`2_1" sap:VirtualizedContainerService.HintSize="378,138">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="400,324">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_7" sap:VirtualizedContainerService.HintSize="378,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetRobotCredential_1" sap:VirtualizedContainerService.HintSize="378,22" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="378,60" />
+      <sap2010:ViewStateData Id="AddToDictionary`2_2" sap:VirtualizedContainerService.HintSize="378,138">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToDictionary`2_3" sap:VirtualizedContainerService.HintSize="378,138">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetRobotCredential_2" sap:VirtualizedContainerService.HintSize="378,22" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="378,60" />
+      <sap2010:ViewStateData Id="AddToDictionary`2_4" sap:VirtualizedContainerService.HintSize="378,138">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToDictionary`2_5" sap:VirtualizedContainerService.HintSize="378,138">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetRobotCredential_3" sap:VirtualizedContainerService.HintSize="378,22" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="378,60" />
+      <sap2010:ViewStateData Id="AddToDictionary`2_6" sap:VirtualizedContainerService.HintSize="378,138">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToDictionary`2_7" sap:VirtualizedContainerService.HintSize="378,138">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="400,1829">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Orchestrator_Assets_1" sap:VirtualizedContainerService.HintSize="440,1909" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
