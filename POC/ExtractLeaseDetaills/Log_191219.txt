@@ -1,0 +1,7 @@
+---------------Start of Execution---------------
+Read config file successfully
+Read input pdf file successfully
+Read input csv file and posted to orchestrator successfully
+Transaction 9ec2114b-4183-4e3a-9462-78d1a9b2e6de processed successfully
+Transaction c7466ec5-ee3d-43c9-83d5-9ba1c536ac85 processed successfully
+---------------End of execution-----------------
