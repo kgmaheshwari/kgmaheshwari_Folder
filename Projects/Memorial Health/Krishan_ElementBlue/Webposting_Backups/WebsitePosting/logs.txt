@@ -1,0 +1,278 @@
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+370,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+370,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+370,2,Failed to read config file,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+370,3,Process terminated,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+371,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+371,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+372,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+372,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+372,3,Read config successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+373,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+373,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+373,3,Read config successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+373,4,Posted to website successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+373,5,Process completed successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+374,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+374,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+374,3,Read config successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+374,4,Posted to website successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+374,5,Process completed successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+375,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+375,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+375,3,Read config successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+375,4,Posted to website successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+375,5,Process completed successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+376,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+376,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+376,3,Read config successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+376,4,Posted to website successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+376,5,Process completed successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+377,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+377,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+377,3,Read config successfully,
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/08/2019 00:00:00,03/31/2019 00:00:00,C0344025877505,"MILLER, JACK L           ",Failed,Failed,Success,20190508_092444_01,,AETNA,,The member that matches your search cri,,,"Process completed, user choose not to submit the memo"
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+377,4,Posted to website successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+377,5,Process completed successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+378,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+378,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+378,3,Read config successfully,
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/08/2019 00:00:00,03/31/2019 00:00:00,C0344025877505,"MILLER, JACK L           ",Failed,Failed,Success,20190508_093654_01,,AETNA,,The member that matches your search cri,,,"Process completed, user choose not to submit the memo"
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+378,4,Posted to website successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+378,5,Process completed successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+379,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+379,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+379,3,Read config successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+380,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+380,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+380,3,Read config successfully,
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/08/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190508_095435_01,1111,AETNA,05/08/2019 09:55:48,,TN: 9430692,,
+05/08/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190508_095435_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+380,4,Posted to website successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+380,5,Process completed successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+381,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+381,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+381,3,Read config successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+382,1,Getting Orchesttrator assets and connected to database  successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+382,2,Request Inserted into Process Master,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+382,3,Read config successfully,
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/09/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190509_043554_01,1111,AETNA,05/09/2019 04:37:11,,TN: 9430692,,"Process completed, user choose not to submit the memo"
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+382,4,Posted to website successfully,
+
+REQ_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+382,5,Process completed successfully,
+
+REQ_NO,REC_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+383,1,,Process started,
+
+REQ_NO,REC_NO,LINE_NUM,REPORT_LINE,MESSAGE_DATETIME
+383,1,,Getting Orchesttrator assets and connected to database  successfully,
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/14/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190514_100041_01,1111,AETNA,05/14/2019 10:01:47,,TN: 9430692,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/14/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190514_100643_01,1111,AETNA,05/14/2019 10:07:53,,TN: 9430692,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Failed,Failed,20190515_052045_01,,,,User choose not to submit,,,
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Failed,20190515_052045_02,,,,STCU file name does not match the Provi,,,Object reference not set to an instance
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Failed,20190515_055946_01,,,,,TN: 9430692,User choose not to submit,
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Failed,20190515_055946_02,,,,STCU file name does not match the Provi,,,Cannot find the UI element correspondin
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Failed,20190515_062156_01,,,,One or more errors occurred.,TN: 9430692,,The target Element was not specified fo
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Failed,20190515_062156_02,,,,STCU file name does not match the Provi,,,Cannot find the UI element correspondin
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190515_073753_01,1111,AETNA,05/15/2019 07:39:02,,TN: 9430692,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190515_074356_01,1111,AETNA,05/15/2019 07:45:26,,TN: 9430692,,"Process completed, user choose not to submit the memo"
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Failed,20190515_074356_02,,,,STCU file name does not match the Provi,,,Object reference not set to an instance
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0464858067506,"GASKAMP, DYLAN ROSE      ",Failed,Failed,Failed,20190515_075629_01,,,,Patient Birth Date Does Not Match That,,,Object reference not set to an instance
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0464858067506,"GASKAMP, DYLAN ROSE      ",Failed,Failed,Failed,20190515_082011_01,,,,Patient Birth Date Does Not Match That,,,Object reference not set to an instance
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0464858067506,"GASKAMP, DYLAN ROSE      ",Failed,Failed,Failed,20190515_082911_01,,,,Patient Birth Date Does Not Match That,,,Object reference not set to an instance
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0464858067506,"GASKAMP, DYLAN ROSE      ",Failed,Failed,Success,20190515_083720_01,,AETNA,,Patient Birth Date Does Not Match That,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190515_090106_01,1111,AETNA,05/15/2019 09:02:25,,TN: 9430692,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/15/2019 00:00:00,03/31/2019 00:00:00,C0464858067506,"GASKAMP, DYLAN ROSE      ",Failed,Failed,Success,20190515_102456_01,,AETNA,,Patient Birth Date Does Not Match That,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/16/2019 00:00:00,03/31/2019 00:00:00,C0464858067506,"GASKAMP, DYLAN ROSE      ",Failed,Failed,Success,20190516_045204_01,,AETNA,,Patient Birth Date Does Not Match That,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/16/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Failed,20190516_045922_01,,,,,TN: 9430692,User choose not to submit,
+05/16/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190516_045922_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/16/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190516_051730_01,1111,AETNA,05/16/2019 05:18:36,,TN: 9430692,,"Process completed, user choose not to submit the memo"
+05/16/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190516_051730_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+,,,,,,,,,,,,,,
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/17/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190517_052633_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/17/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190517_111711_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/21/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190521_104338_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/21/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190521_110208_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/21/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190521_112058_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/22/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190522_064010_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/22/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190522_064633_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/22/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190522_065801_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/22/2019 00:00:00,03/31/2019 00:00:00,C0386106187500,"BOX, STACEY SANFORD      ",Failed,Failed,Success,20190522_075137_02,,AETNA,,STCU file name does not match the Provi,,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/22/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Failed,Success,20190522_081327_02,,AETNA,,,,Cannot find the UI element correspondin,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/22/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190522_100728_02,1111,AETNA,05/22/2019 10:11:25,,TN: 9430693,,"Process completed, user choose not to submit the memo"
+
+Process Date,Admission Date,Account Number,Patient Name,Payer Status,PixCert Status,HealthQuest Status,Transaction ID,Payer Autorization,Payer,Payer Submission Datetime,Payer Site Exceptions,Pixcert Tracking,Pixcert Exceptions,Health Quest Exceptions
+05/22/2019 00:00:00,03/27/2019 00:00:00,C0350871087502,"SIMMS, NELLY             ",Success,Success,Success,20190522_102429_02,1111,AETNA,05/22/2019 10:27:52,,TN: 9430693,,"Process completed, user choose not to submit the memo"
