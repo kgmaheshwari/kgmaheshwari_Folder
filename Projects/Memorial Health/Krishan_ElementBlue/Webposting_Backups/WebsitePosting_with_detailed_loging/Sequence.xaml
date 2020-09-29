@@ -1,0 +1,264 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Sequence_3"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:GenericValue" Name="patientName" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="NAME" />
+      <Variable x:TypeArguments="s:String[]" Name="namesArr" />
+      <Variable x:TypeArguments="x:Boolean" Name="exceptionDiv" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="exceptionMessage" />
+      <Variable x:TypeArguments="x:Boolean" Name="birthDateNotMatch" />
+    </Sequence.Variables>
+    <ui:ImageFound DisplayName="Image Exists 'iexplore.exe  NaviNet'" Found="[birthDateNotMatch]" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html title='NaviNet' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+      </ui:ImageFound.Target>
+    </ui:ImageFound>
+    <If Condition="[birthDateNotMatch]" sap2010:WorkflowViewState.IdRef="If_7">
+      <If.Then>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap2010:WorkflowViewState.IdRef="GetValue_5">
+            <ui:GetValue.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7cdbf33d3072a488277a265871ccac95" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl idx='5' parentid='frmPlanForm' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:GetValue.Target>
+            <ui:GetValue.Value>
+              <OutArgument x:TypeArguments="ui:GenericValue">[exceptionMessage]</OutArgument>
+            </ui:GetValue.Value>
+          </ui:GetValue>
+          <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign.To>
+              <OutArgument x:TypeArguments="ui:GenericValue">[exceptionMessage]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="ui:GenericValue">[exceptionMessage.Substring(0,exceptionMessage.IndexOf("(EDI")).Trim]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+    </If>
+    <ui:CommentOut DisplayName="invalid subscriber" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <ui:WaitImageAppear DisplayName="Find Image 'iexplore.exe  NaviNet'" FoundElement="[invalidSubscriber]" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+            <ui:WaitImageAppear.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+            </ui:WaitImageAppear.Image>
+            <ui:WaitImageAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='NaviNet' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:WaitImageAppear.Target>
+          </ui:WaitImageAppear>
+          <If Condition="[IsNothing(invalidSubscriber) = false]" sap2010:WorkflowViewState.IdRef="If_6">
+            <If.Then>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                  <ui:GetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="67d667cee647d61630ef4738ea18a42e" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl idx='5' parentid='frmPlanForm' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetValue.Target>
+                  <ui:GetValue.Value>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[exceptionMessage]</OutArgument>
+                  </ui:GetValue.Value>
+                </ui:GetValue>
+                <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[exceptionMessage]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="ui:GenericValue">[exceptionMessage.Substring(0,exceptionMessage.IndexOf("(EDI")).Trim]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Then>
+          </If>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <ui:UiElementExists DisplayName="Element Exists 'TD'" Exists="[exceptionDiv]" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="244d95941c8b6dea37d59d6e8b4a9d48" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl idx='5' parentid='frmPlanForm' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+            </ui:UiElementExists.Target>
+          </ui:UiElementExists>
+          <If Condition="[exceptionDiv]" sap2010:WorkflowViewState.IdRef="If_4">
+            <If.Then>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                  <ui:GetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="244d95941c8b6dea37d59d6e8b4a9d48" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl idx='5' parentid='frmPlanForm' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetValue.Target>
+                  <ui:GetValue.Value>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[exceptionMessage]</OutArgument>
+                  </ui:GetValue.Value>
+                </ui:GetValue>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[exceptionMessage.Substring(0,exceptionMessage.IndexOf(&quot;(EDI&quot;)).Trim]" TopMost="True" />
+              </Sequence>
+            </If.Then>
+          </If>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <sads:DebugSymbol.Symbol>d0FDOlxSUEFcUmVsZWFzZXNcUHJlQWRtaXNzaW9uc1xBcHJfMTBcV2Vic2l0ZVBvc3RpbmdcU2VxdWVuY2UueGFtbBFBA6cBDgIBAUoFURUCARJSBWcKAgEEaAWLARUCAQOMAQWlARUCAQJPSk9qAgEXT3VPewIBFkpNSmICARRMM0w4AgETUhNSKAIBBVQJZRQCAQdVC1wZAgEOXQtkFAIBCFo+WlACAQ9XngFXlAICARFiPWKCAQIBC18+X1ACAQk=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="ImageFound_2" sap:VirtualizedContainerService.HintSize="314,106">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetValue_5" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="336,330">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_7" sap:VirtualizedContainerService.HintSize="314,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WaitImageAppear_1" sap:VirtualizedContainerService.HintSize="464,106" />
+      <sap2010:ViewStateData Id="GetValue_4" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="336,330">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_6" sap:VirtualizedContainerService.HintSize="464,477">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="486,747">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CommentOut_2" sap:VirtualizedContainerService.HintSize="314,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="UiElementExists_1" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="GetValue_2" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="MessageBox_4" sap:VirtualizedContainerService.HintSize="314,59" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="478,785" />
+      <sap2010:ViewStateData Id="If_4" sap:VirtualizedContainerService.HintSize="314,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="336,321">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CommentOut_3" sap:VirtualizedContainerService.HintSize="314,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="336,503">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

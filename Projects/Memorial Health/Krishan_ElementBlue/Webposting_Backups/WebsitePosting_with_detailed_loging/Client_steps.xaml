@@ -1,0 +1,204 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Client_steps" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Client_steps_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence DisplayName="Client_steps" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+          <ui:Click.CursorPosition>
+            <ui:CursorPosition Position="Center">
+              <ui:CursorPosition.OffsetX>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetX>
+              <ui:CursorPosition.OffsetY>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetY>
+            </ui:CursorPosition>
+          </ui:Click.CursorPosition>
+          <ui:Click.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6a6aa45b0b3f497472b3cbba617f93f4" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl name='SubmitButton' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+          </ui:Click.Target>
+        </ui:Click>
+      </Sequence>
+      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TD'" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3a84fbedade85bd5877b94094c2753ad" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl aaname='Name Provider ID/NPI Specialty City, State' parentid='frmSearch' tag='TABLE' /&gt;&lt;webctrl idx='1' tableCol='5' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5520773f3d265015fdf039ceff652fd0" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl name='DISPLAY_ProviderID' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TD'" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2fbe6eeb9515641b5a0943f4442b3576" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl idx='2' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='2' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image 'iexplore.exe  NaviNet'" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+        <ui:WaitImageAppear.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQcAAAAfCAYAAADqWQjlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUDSURBVHhe7ZiLTVxRDERTCYVQCYVQB3VQBn1QzEaTMOjIsu/7LIHdaI5kwfrdjz328yJ+XUIIoSHDIYTQkuEQQmjJcAghtGQ4hBBaMhxCCC0ZDiGElgyHEEJLhkMIoeXHhsPz8/Pl4eHhj729vX14r+f19fXzXN1xLV993v/M09PTp1ZbNaWuLy8vH96wF2v3+Pj44fl6rhoODtD2/v7+8WSbDIdj6AVyHJ0d0f5fcU/DwXdXu5cvAMd7k8NBxaeosiNF/lfDYWJ13z18i3E4MEa+kLcae8dPaT7pKOy/hUG7hWO9yeHAl+1MoBkOx5iaWo1sv+xe+AnN+YU29ar6JMPhL6eHA4Pjt9ckrNZ5jaz7E5TFU5HYQFzHF0VGuqbjXTTFVM+iKZepiZlP/azfO/zcduTPcMbJOIT9MsXMgaE7+Fn5mKqvTLoTPiOsle4QzKf2AYez9/j3mg/PphHqoTz4eYL5OuY9MFZbjbn2t63eU/uJn6kZ86FpvfBn9xrXHMltxanhsEqwilYb1VBMvxi1KdyoLI72+Q77eO4UC5uzvoir+KdntRmU55TrEQ0mdLfX1hjtl9U4qikfQU1N55t0Yzz2c79iMMzT8FzmYz914lqfy/urTdT+kjHOCnV0jvQpLqMcra3gOj0z7KdqjqXTS0gT38F9Xsf8GNtZTg2Hrlj+TCFEt1bQb+Gn5NgILEDXjBS/azqZ7zPTHjE9WxWw+qeXZhVThRowDmrmF0p3VB+Zcur0n2ri/FnvrXrod9PFwLuoB/1eSz147haMsVrVymsnv2wF67vVn2ZvXl5T37euLmc5NRy6wCgYC2ufjHQvBpuAjTgJxjtvcTg4Jn+ua1cxVagB4+ju00/79Lyyutd+1rY2HM/fioU+3tXpyrgmc19QD/bEHnh3Z4I5rsx5itW5zn3qJ8O+4tkVr2GdBPdfy+HhMCVHvwso7KtJdA2qn/bxjKkRumac4uvuM6uCTc+mInQx+fMeDSaoQbV6Lhu7Gw7TCyvslxnerbOpCRu4y73ziU7Xs3rorGvgvTKdvaVhhfsde5fPqtfE3pfba2rt9+7fw+HhwGJPxoA7n+iE00/79NxMjdA13iT+qvFWBZueTUXoYvLnPRpMUIMaY2WrsVf32s9YeZ708P56dpd75xOdroxLz1dQj621e6j6Mudat8oUS6dzlzeZ+qriNTW2vfv3cGg4ULDucgZmMabm6ITTT/v03Ezid2dP4nf3mVXBpmdTEbZeELKKqUINaowV1kl3V6acJv2Fc2AurIXocmfcXN/FQF8XN5nOXaE901rWwmu6fu6YYunqyxydN+FZqzu95maGAxOrzSOYmJ+z4ShGJzzX8vxJ/K4ZJ/FXRVm9TNO+I8NhzxmrRhDUoMZf2RoOgnGazmeYw7Smy13Yx1j44jCfye+c7KMeim0P3EOmvqOOdY/jFN3+utf1XfWhWfWWc/VzrSXT3jMcGg5bzTyJSfFsbCSf1YkspkbomnElPs+RUdguRp05nbcqoP2OSWxpwLUdjL3mVWEddMcEc7NR98rWulU+3Cvj2poP46/mc6kHe2IL3lttqoEHQTVqULVUf3Cfe3zVn4T50ZyrP7OHxdSXZzj8P4fwdbhRa4FDuAUyHL4BfxPym4l/SRz55gvhu8hw+Ab2/Jkcwq2R4RBCaMlwCCG0ZDiEEFoyHEIILRkOIYSWDIcQQsPl8hunKDMAVTJ8lgAAAABJRU5ErkJggg==" />
+        </ui:WaitImageAppear.Image>
+        <ui:WaitImageAppear.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='NaviNet' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:WaitImageAppear.Target>
+      </ui:WaitImageAppear>
+      <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image 'iexplore.exe  NaviNet'" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
+        <ui:WaitImageAppear.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWYAAAApCAYAAAAGX4MbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZfSURBVHhe7ZiNURxJDIUvEgIhEgIhDuIgDPIgGK6ei2d/p5J6Z7y7pn28r0rlXY1Grb8W4H8+QgghbEUWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbMY2i/nt7e3j4eHhhzw/P39qb4P9Su6B4rX/19fXT234Cla94DPJy8vLD+H3ryDzEyo3XcxPT08/B+zskGUxXw/zrHLrmu7K1Asu4Pf390/tf/XffTE7hk4eHx8/rcKf4KaLuTZTi/oo91zM3wXW3rCu1P/N8BcALtkVWiyy/6oFw+WrnuyI45MQ6o/WO1zHzRazftKzgWcbmcV8Paw74VL4qt8Kb0kW831wfBLyf5ufv4GbLWZeFjZy+tOMf0JK6vvGOl0oXUJ/l3hI6m+FdfCtr5ey+pvsGBvF56wuXfcDi/kJxqGzalzVfoLvENbavqhTjPxOutxddzLVUu8T1spS8/MSlfC77PiM4nPoX72Y4pKIWgdyKafplxEJ56CrocRzVmMmu84P6XpSaymmOnT3qMu7g+9Y6tmrWZfUmovOr6T67uy6Gp3lJot5NRgeYsIGyVZMzbdO4kGmrXQ+g34JbQ19sDH6bDvmUYstm26g6KuLp9PVi+TzOZyK9xL0QbraUldFMCbnNNWDvji4+uzeiM7GOtopf+spPpM19PyYqRfWcQbEFPuRnPS5+uP5fG+KS0zPulnpdPeeH8ZHP4rVeveBOttOcyMUq3PmOayrPledsC1np9OxlxLHxVpyjqyjD6Hv7KntOl199yw3WcwcAAc5Jd01TlDP5lnHpky2bEBXrK7ZkonJX4UD5SFjTS7lycGtDZ30HbaVEPbC8V3Kze/Uc+lLrGInrlG9XKyd5+RSbxgDZ0t0vRDW1fO7OhzNqYPvur9iikt0z3aZH55HvXCfmKew3rW+5h4J1sLvT7bdWdP5nV/qWPeKz6/zxLjqbJ7hJou5uygsBhNk4CxSN3DCOhZgsp0aYB19eHgobLCgPwvPM8zJPjqdsd7xHLlYdQA6bCsxZ2slGM9KZDf1ucL3JnGd2JuObt7MVHfrah27OhzNyXSzJGEvV/Ow4/x0QhRTZ1NFsJ4WzqKZcuZZfm+akc6267HQZ+vdZ+ostaai2nRS+3aGqxfzNBTUcyjOFF9YRx+T7dQA6+ija4ClO78T0+XE5VEbZL1E/ImLxXqIqVZiFU9l5YfY5kgesrF9B2urWMk0X9bV87v4j+ZEO9dpqt0Ul9hxfgRjqH4Vk5/xvkzYthMz1ag7y98lhLaOeeqnPlsvG8P5q+J58/cjdf0drl7MTHolTuhM8YV1LMBkOzXAuq6I9EWpF75rlpvZ5TTlKax3PPe6WCumWgnGc+nclR9iG8klWOsOLozap6nu1tV8uvjP5kSfUy9X87Dz/FDneReKyfp65gr21mK/U87qQbWlH8K45E9M/ez8Es6ZxT6puwdXL2YWqA4QC+3Ep2J0BRXWcbAm26kB1l0aztWFN138zNM1OJPnPS/WxFQrs+orYezsRYW17c4jPLtj1aeuF8K6WseuDkdzsg19Tr2c4hLds13mh+dJuppKah8u0eU31Yg9sv6IrfvZ6cRU4wpr4Jqfmeff4arFzIHoGs+E+Fyfq47Fc/Kie78rlJgaYB196DsbKmzn4ZZv+hf6bjsPI3X0yeaZTnfPizUx1cowpurP+ZrV4DMf20h4kf2+dZ4PSccq9qkX1tU6Tr6O5MRedrPA3PWe9fJNdp8f1oLPeA+rf8VhnfKTEObc1c51YG7Vh/XMudOtemm9e6J/aw35fjdTEucgbE/dWa5azCykE6vwkjEp6iUqhj+zAdax8RwI2rKAbIB19GFdFb7H/Ci1cbRjjoLNtzBmce+L1THVqjLVYJUDZTXkkx1nY6LG5fenXlhX67iqw5GcGKuE/i7l7limmMUu8yO/fM6lU59ZlK+ovbLUWCc7iX1VundqH6ces7b2X3tkmeo32dfcznL1f2WEEMItWP2A+m5kMYcQtiCL+RdZzCGELchi/kUWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbEYWcwghbMXHx78uhX95b5fW/wAAAABJRU5ErkJggg==" />
+        </ui:WaitImageAppear.Image>
+        <ui:WaitImageAppear.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='NaviNet' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:WaitImageAppear.Target>
+      </ui:WaitImageAppear>
+    </Sequence>
+    <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text 'TD'" sap2010:WorkflowViewState.IdRef="GetValue_1">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f34ba42772e5d0e97235094256668116" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;center&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='frmPlanForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='1' tableCol='2' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetValue.Target>
+    </ui:GetValue>
+    <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text 'TD'" sap2010:WorkflowViewState.IdRef="GetValue_2">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="71e6fba72a392f2871c5e2c1d14c61fe" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;center&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='frmPlanForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='1' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetValue.Target>
+    </ui:GetValue>
+    <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text 'TD'" sap2010:WorkflowViewState.IdRef="GetValue_3">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ccf8be6b063fe6c827646d2d55c2a1ce" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;center&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='frmPlanForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='1' tableCol='4' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetValue.Target>
+    </ui:GetValue>
+    <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text 'TD'">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7e2b656d0c0067e2064aa092266bd410" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;center&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='frmPlanForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableCol='4' tableRow='2' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetValue.Target>
+      <sap2010:WorkflowViewState.IdRef>GetValue_4</sap2010:WorkflowViewState.IdRef>
+    </ui:GetValue>
+    <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text 'TD'">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ffec73cf5650199961531039374ef327" Selector="&lt;html title='NaviNet' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;center&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='frmPlanForm' tableRow='2' tag='TABLE' /&gt;&lt;webctrl idx='1' tableCol='3' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetValue.Target>
+      <sap2010:WorkflowViewState.IdRef>GetValue_5</sap2010:WorkflowViewState.IdRef>
+    </ui:GetValue>
+    <sads:DebugSymbol.Symbol>d0dDOlxSUEFcUmVsZWFzZXNcUHJlQWRtaXNzaW9uc1xNYXJjaF8yOFxXZWJzaXRlUG9zdGluZ1xDbGllbnRfc3RlcHMueGFtbBs5A6YBDgIBAToFiQEQAgEMigEFjgETAgEKjwEFkwETAgEIlAEFmAETAgEGmQEFngETAgEEnwEFpAETAgECOwdLEgIBGUwHWhICARdbB2kSAgEVagd4EgIBE3kHgAEcAgEQgQEHiAEcAgENjAGYAYwBnAMCAQuRAZgBkQGPAwIBCZYBmAGWAZwDAgEHmwGYAZsBoQMCAQWhAZgBoQGcAwIBAzwJShQCARpYmgFYzwICARhnmgFn8QECARZ2mgF2kQICARR+YX6BAQIBEns1ezoCARGGAWGGAYEBAgEPgwE1gwE6AgEOSJwBSO0BAgEb</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Click_1" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,230">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Click_2" sap:VirtualizedContainerService.HintSize="336,106" />
+      <sap2010:ViewStateData Id="Click_3" sap:VirtualizedContainerService.HintSize="336,106" />
+      <sap2010:ViewStateData Id="Click_4" sap:VirtualizedContainerService.HintSize="336,106" />
+      <sap2010:ViewStateData Id="WaitImageAppear_1" sap:VirtualizedContainerService.HintSize="336,106" />
+      <sap2010:ViewStateData Id="WaitImageAppear_2" sap:VirtualizedContainerService.HintSize="336,106" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="358,1084">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetValue_1" sap:VirtualizedContainerService.HintSize="358,106" />
+      <sap2010:ViewStateData Id="GetValue_2" sap:VirtualizedContainerService.HintSize="358,106" />
+      <sap2010:ViewStateData Id="GetValue_3" sap:VirtualizedContainerService.HintSize="358,106" />
+      <sap2010:ViewStateData Id="GetValue_4" sap:VirtualizedContainerService.HintSize="358,106" />
+      <sap2010:ViewStateData Id="GetValue_5" sap:VirtualizedContainerService.HintSize="358,106" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="380,1938">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Client_steps_1" sap:VirtualizedContainerService.HintSize="420,2058" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
